@@ -42,20 +42,3 @@ library_management/
 ├── requirements.txt              # List of required packages
 ├── README.md                     # Project overview
 └── run.py                        # Entry point to launch the app
-
-Key Component Breakdown:
-models/ – Contains the core data structures (classes like Book, Member, Loan).
-
-services/ – Contains logic to add a book, issue a loan, register a user, etc.
-
-db/ – Interfaces with SQLite, PostgreSQL, or any DB; manages schema and CRUD.
-
-cli/ – If it's a terminal-based project, contains user interaction code.
-
-utils/ – Validation, formatting dates, or calculating fines, etc.
-
-tests/ – For unit testing using pytest or unittest.
-
-config.py – Centralized settings (e.g., database URI, constants).
-
-run.py – Entry script to start the application (python run.py).
