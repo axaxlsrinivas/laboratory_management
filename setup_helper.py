@@ -32,7 +32,7 @@ def main():
     # 5. Train AI model
     run_command(f'{sys.executable} app/cli/testcli.py train-item-model')
     print("\nSetup complete! To start the web app, run:")
-    print(f"{sys.executable} user_interface/web_login.py")
+    print(f"{sys.executable} user_interface/lab_management_app.py")
     print("\nThen open http://127.0.0.1:5000/ in your browser.")
 
 if __name__ == "__main__":

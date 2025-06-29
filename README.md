@@ -87,7 +87,7 @@ python app/cli/testcli.py train-item-model
 
 ### 7. Run the Web Application
 ```
-python user_interface/web_login.py
+python user_interface/lab_management_app.py
 ```
 - Open your browser and go to: [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
@@ -158,7 +158,7 @@ Edit `helper_dev.py` to add more tips for your team or class!
 ## File/Script Overview
 - `run.py`: Initializes the database.
 - `app/db/insert_sample_data.py`: Populates the database with sample items and usage data.
-- `user_interface/web_login.py`: Main Flask web app (login, items, prediction, chart).
+- `user_interface/lab_management_app.py`: Main Flask web app (login, items, prediction, chart).
 - `app/cli/testcli.py`: Command-line interface for login and AI prediction.
 - `app/services/ai_item_model.py`: AI model logic for item usage prediction.
 
