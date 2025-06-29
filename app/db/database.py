@@ -26,5 +26,15 @@ def init_db():
             FOREIGN KEY(owner_id) REFERENCES users(id)
         )
     ''')
+    # Create item_usage table for AI model training
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS item_usage (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            item_id INTEGER NOT NULL,
+            day INTEGER NOT NULL,
+            used INTEGER NOT NULL,
+            FOREIGN KEY(item_id) REFERENCES items(id)
+        )
+    ''')
     conn.commit()
     conn.close()

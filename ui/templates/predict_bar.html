@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predicted Usage Bar Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/static/items_ui.css">
+    <style>
+        body {
+            background: #f4f8fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .chart-container {
+            background: #fff;
+            margin-top: 60px;
+            padding: 32px 40px 24px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            width: 500px;
+            text-align: center;
+        }
+        h1 {
+            color: #2a4d69;
+            margin-bottom: 24px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 24px;
+            color: #2a4d69;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .chart-btn {
+            background-color: #2a4d69;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .chart-btn:hover {
+            background-color: #1d3c6a;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <h1>Predicted Usage for All Items (Day {{ day }})</h1>
+        <form method="post" style="margin-bottom: 18px; text-align: right;">
+            <label for="day" style="font-weight:500; color:#2a4d69;">Prediction Day:</label>
+            <input type="number" id="day" name="day" min="1" value="{{ day }}" style="width:60px; padding:4px 8px; border-radius:4px; border:1px solid #bfc9d1;">
+            <button class="chart-btn" type="submit" style="padding:7px 18px; font-size:1em;">Update</button>
+        </form>
+        <canvas id="barChart" width="400" height="300"></canvas>
+        <a class="back-link" href="/items">&#8592; Back to Items</a>
+    </div>
+    <script>
+        const ctx = document.getElementById('barChart').getContext('2d');
+        const barChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: {{ labels|tojson }},
+                datasets: [{
+                    label: 'Predicted Usage',
+                    data: {{ predictions|tojson }},
+                    backgroundColor: [
+                        '#2a4d69', '#41729f', '#4b86b4', '#adcbe3'
+                    ],
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -28,3 +28,45 @@ th {
 tr:nth-child(even) {
     background: #f2f2f2;
 }
+.predict-btn {
+    background: linear-gradient(90deg, #2a4d69 60%, #41729f 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 28px;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 18px;
+    margin-top: 0;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(42,77,105,0.08);
+    transition: background 0.2s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.predict-btn:hover {
+    background: linear-gradient(90deg, #41729f 60%, #2a4d69 100%);
+    transform: translateY(-2px) scale(1.04);
+}
+.chart-btn {
+    background: linear-gradient(90deg, #4b86b4 60%, #adcbe3 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 28px;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(42,77,105,0.08);
+    transition: background 0.2s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.chart-btn:hover {
+    background: linear-gradient(90deg, #adcbe3 60%, #4b86b4 100%);
+    transform: translateY(-2px) scale(1.04);
+}
