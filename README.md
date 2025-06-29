@@ -174,3 +174,39 @@ Edit `helper_dev.py` to add more tips for your team or class!
 - Update `app/db/insert_sample_data.py` to add more items or usage data.
 - Update `app/services/ai_item_model.py` for advanced AI/ML logic.
 - UI templates are in `ui/templates/` and static files in `ui/static/`.
+
+---
+
+## How to Integrate Live Data in the Future
+
+If you want to use live data (from sensors, APIs, or real-time user input) instead of sample/demo data, follow these steps:
+
+1. **Update the Database Schema**
+   - Add new columns or tables as needed (e.g., timestamps, sensor IDs).
+   - Example: To add a timestamp to item usage:
+     ```sql
+     ALTER TABLE item_usage ADD COLUMN timestamp DATETIME;
+     ```
+
+2. **Update Data Ingestion Logic**
+   - Replace or supplement `app/db/insert_sample_data.py` with code that fetches or receives live data.
+   - Example: Write a script or API endpoint to insert new usage records as they arrive.
+
+3. **Update AI Model Training**
+   - Ensure your AI model uses the latest/live data for training and prediction.
+   - Retrain the model periodically or after new data is added.
+
+4. **Update the Web App**
+   - Modify Flask routes to display live data.
+   - For real-time updates, consider using AJAX or WebSockets in the UI.
+
+5. **Remove or Archive Demo Data**
+   - Once live data is flowing, you can remove or archive the sample/demo data logic.
+
+**Developer Tips:**
+- Replace the logic in `app/db/insert_sample_data.py` with your live data ingestion code.
+- Update the `item_usage` table schema if your live data has new fields.
+- Make sure your AI model in `app/services/ai_item_model.py` uses the new data format.
+- Test the web app and CLI to ensure they work with live data.
+
+If you have a specific live data source (API, file, sensor, etc.), update the ingestion logic accordingly. For help, ask for a code example for your data source!
