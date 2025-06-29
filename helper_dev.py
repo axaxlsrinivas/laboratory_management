@@ -19,7 +19,7 @@ def print_activate_venv():
 # 2. How to run the web app
 
 def print_run_web():
-    print('Run the web app: python user_interface/web_login.py')
+    print('Run the web app: python user_interface/lab_management_app.py')
     print('Then open http://127.0.0.1:5000/ in your browser.')
 
 # 3. How to insert your own data
