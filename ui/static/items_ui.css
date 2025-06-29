@@ -1,0 +1,26 @@
+.items-ui-container {
+    background: #fff;
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 30px 40px 25px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    text-align: center;
+}
+h2 {
+    color: #333;
+    margin-bottom: 25px;
+}
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 18px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+a:hover {
+    background: #0056b3;
+}

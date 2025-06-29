@@ -1,0 +1,30 @@
+.items-container {
+    background: #fff;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px 40px 25px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background: #007bff;
+    color: #fff;
+}
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
