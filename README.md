@@ -1,4 +1,4 @@
 # laboratory_management
 
 
-# Text
+# Crating Laboratory Management Python Project Structure.
