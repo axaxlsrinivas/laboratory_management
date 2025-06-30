@@ -1,3 +1,67 @@
+# Laboratory Management System
+
+A modern, educational, and extensible Laboratory Management System for tracking laboratory items, predicting usage with AI, and providing both web and CLI interfaces. Designed for students, developers, and educators to learn, extend, and manage laboratory resources efficiently.
+
+---
+
+## Project Overview
+
+This project provides a full-stack solution for laboratory inventory management, including:
+- **User login** (demo credentials: `admin` / `password123`)
+- **Item management**: View, track, and predict usage of laboratory items
+- **AI-powered predictions**: Forecast item usage for any day, per item
+- **Interactive web interface**: Built with Flask, modern UI, and charts
+- **Command-line interface (CLI)**: For automation and scripting
+- **Sample data and helper scripts**: For easy setup and learning
+- **Unit tests**: For reliability and educational purposes
+
+---
+
+## Key Features
+
+- **User Authentication**: Simple login system for demonstration
+- **Items Table**: View all items, their categories, quantities, and predicted usage
+- **AI Prediction**: Uses a machine learning model to predict item usage for any day, per item
+- **Bar Chart Visualization**: See predicted usage for all items in a beautiful chart
+- **Day Selector**: Instantly update predictions for any day
+- **CLI Tools**: Login, predict, and train the model from the command line
+- **Sample Data**: Preloaded for quick demo and testing
+- **Helper Scripts**: For setup, development, and learning
+- **Extensible**: Easy to add new features, data sources, or AI models
+
+---
+
+## Who Is This For?
+- **Students**: Learn about databases, web development, AI, and software engineering
+- **Educators**: Use as a teaching tool or assignment starter
+- **Developers**: Extend for real-world laboratory management or research
+
+---
+
+## Technologies Used
+- **Python 3.8+**
+- **Flask** (web framework)
+- **SQLite** (local database)
+- **scikit-learn, pandas** (AI/ML)
+- **Chart.js** (bar chart visualization)
+- **HTML/CSS** (modern UI)
+
+---
+
+## How It Works
+- **Database**: Stores users, items, and item usage (with sample/demo data)
+- **AI Model**: Trained on usage data to predict future needs
+- **Web App**: Login, view items, predict usage, and visualize data
+- **CLI**: For automation, scripting, and testing
+- **Helper Scripts**: For setup, development, and learning
+
+---
+
+## Getting Started
+See the detailed instructions below for setup, running, and extending the project on Windows or Mac.
+
+---
+
 # laboratory_management
 
 
